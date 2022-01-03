@@ -11,10 +11,11 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Responsive design
 
 ## Getting Started
-To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The `/demo/` path in each template directory contains a working demo to provide code examples for simple interactions.
+To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The `/demo/` path in each template directory contains a working demo to provide code examples for simple interactions. You can also [preview a live version of the overlay-demplate demo](https://dvrpc.github.io/map-templates/)
+
 <br />
-<br />
-To start a project using one of the templates:
+
+<strong>To start a project using one of the templates:</strong>
 - Initialize empty Git repo for project
 - Copy template directory to project root
 - fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
