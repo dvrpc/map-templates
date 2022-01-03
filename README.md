@@ -10,6 +10,7 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Responsive design
 
 ## Getting Started
+- Initialize empty Git repo for project
 - Copy template directory to project root
 - fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
 - `npm clean-install`
