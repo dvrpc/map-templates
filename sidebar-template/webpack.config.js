@@ -52,7 +52,6 @@ let indexConfig = new HtmlWebpackPlugin({
 
 /***** JS/CSS Bundle + Static Assets creation *****/
 module.exports = {
-    // note: you can just have './js/index.js' if babel isn't needed but it must still be in an array
     entry: ['./js/index.js'],
     mode: 'production',
     module: {

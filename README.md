@@ -24,8 +24,9 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - The rest of the content, actions and styles are up to you. Happy hacking. 
 
 ## Deployment
-- make sure packages are installed and `package.json` is configured (see getting started first steps)
 - `npm run build`
     - if this errors out, try `npm clean-install` to wipe and reset installed packages then `npm run build` again
+- in `/build/` folder:
+    - delete `<script defer="defer" type="module" src="./js/index.js"></script>` from `index.html`
+    - (optional) cache busting, change css file names and corresponding `<link>` paths in `index.html`
 - copy files from `/build/` folder to deployment location.
-- to ensure cache busting, change css file names and corresponding `<link>` paths in `index.html`
