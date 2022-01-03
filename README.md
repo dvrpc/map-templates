@@ -6,12 +6,20 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Mapbox geocoder to search + zoom to
 - About modal to provide additional information about the app
 - DVRPC icon map overlay to easily re-orient view to the DVRPC region
-- webpack config that outputs compiled project to `/build/`
+- Webpack config that outputs compiled project to `/build/`
+- Google Analytics tracking script
 - Responsive design
 
 ## Getting Started
-- Copy directory to project root 
-- `npm install`
+To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The /demo/ path in each template directory contains a working demo to provide code examples for simple interactions.
+<br />
+<br />
+To start a project using one of the templates:
+- Initialize empty Git repo for project
+- Copy template directory to project root
+- fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
+- `npm clean-install`
+- commit and push
 - Spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) from root to launch project
 - Add default map layers to `/js/map/mapLayers.js`
     - default map layers are visible after the initial page load. DVRPC County and municipal boundaries are included with the template. 
@@ -22,6 +30,10 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - The rest of the content, actions and styles are up to you. Happy hacking. 
 
 ## Deployment
+- make sure meta tags (created, description and keywords) and OG tags are filled out
 - `npm run build`
+    - if this errors out, try `npm clean-install` to wipe and reset installed packages then `npm run build` again
+- in `/build/` folder:
+    - delete `<script defer="defer" type="module" src="./js/index.js"></script>` from `index.html`
+    - (optional) cache busting, change css file names and corresponding `<link>` paths in `index.html`
 - copy files from `/build/` folder to deployment location.
-- to ensure cache busting, change css file names and corresponding `<link>` paths in `index.html`
