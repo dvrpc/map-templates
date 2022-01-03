@@ -58,13 +58,7 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/,
-                
-                // remove if not using babel
-                loader: 'babel-loader',
-                query: {
-                    presets: ['minify']
-                }
+                exclude: /node_modules/
             },
             // load styles
             {
@@ -125,7 +119,6 @@ module.exports = {
                 }
             ]
         }),
-        // add HTML bundle here IF only HTML file is index
         indexConfig
     ]
 }
