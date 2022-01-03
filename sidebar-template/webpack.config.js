@@ -34,8 +34,9 @@ const TerserPlugin = require("terser-webpack-plugin");
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
-    // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. <script>, <link>, etc)
-    // inject: 'body',
+    inject: 'head',
+    scriptLoading: 'defer',
+    hash: true,
     minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -52,7 +53,7 @@ let indexConfig = new HtmlWebpackPlugin({
 /***** JS/CSS Bundle + Static Assets creation *****/
 module.exports = {
     // note: you can just have './js/index.js' if babel isn't needed but it must still be in an array
-    entry: ['@babel/polyfill', './js/index.js'],
+    entry: ['./js/index.js'],
     mode: 'production',
     module: {
         rules: [

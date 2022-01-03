@@ -10,8 +10,10 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Responsive design
 
 ## Getting Started
-- Copy directory to project root 
-- `npm install`
+- Copy directory to project root
+- fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
+- `npm i --save-dev`
+- commit and push
 - Spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) from root to launch project
 - Add default map layers to `/js/map/mapLayers.js`
     - default map layers are visible after the initial page load. DVRPC County and municipal boundaries are included with the template. 
@@ -22,6 +24,8 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - The rest of the content, actions and styles are up to you. Happy hacking. 
 
 ## Deployment
+- make sure packages are installed and `package.json` is configured (see getting started first steps)
 - `npm run build`
+    - if this errors out, try `npm clean-install` to wipe and reset installed packages then `npm run build` again
 - copy files from `/build/` folder to deployment location.
 - to ensure cache busting, change css file names and corresponding `<link>` paths in `index.html`

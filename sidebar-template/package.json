@@ -1,26 +1,21 @@
 {
-  "name": "sidebar-template-webmap",
-  "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "license": "CC0-1.0",
+  "name": "sidebar-demo-2",
+  "version": "1.0.2",
+  "description": "demo",
+  "keywords": [
+    "test"
+  ],
+  "author": "marc molta",
   "main": "index.js",
-  "directories": {
-    "src": "src",
-    "dist": "dist"
+  "license": "ISC",
+  "scripts": {
+    "test": "test",
+    "build": "webpack && npm version patch",
+    "build:prod": "webpack -p && npm version minor"
   },
   "repository": {
     "type": "git",
-    "url": "link to repository"
-  },
-  "browserslist": [
-    "extends @dvrpc/browserslist-config"
-  ],
-  "scripts": {
-    "test": "npm test",
-    "start": "webpack-dev-server --config webpack.config.js",
-    "build": "webpack && npm version patch",
-    "build:prod": "webpack -p && npm version minor"
+    "url": "https://github.com/dvrpc/map-templates/"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",
@@ -33,8 +28,5 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.10.3",
     "webpack-cli": "^4.2.0"
-  },
-  "optionalDependencies": {
-    "license-checker": "^8.0.4"
   }
 }
