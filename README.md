@@ -10,9 +10,9 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Responsive design
 
 ## Getting Started
-- Copy directory to project root
+- Copy template directory to project root
 - fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
-- `npm i --save-dev`
+- `npm clean-install`
 - commit and push
 - Spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) from root to launch project
 - Add default map layers to `/js/map/mapLayers.js`
