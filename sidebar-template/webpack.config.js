@@ -1,8 +1,4 @@
-/* 
-    Steps to create production bundles for apps with traditional* architecture
-        See webpack.config.js for projects built in React etc
-        * This does still assume modular js w/a single entry point (i.e. index.js). Monorepos also work.
-    
+/*     
     The output from these steps are:
         A minified, (polyfilled) production bundle for your javascript
         Minified HTML pages 
@@ -35,12 +31,11 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 
 /***** Steps to copy and minify existing HTML files using html-webpack-plugin *****/
-// Use this for individual files (i.e. index.html)
 let indexConfig = new HtmlWebpackPlugin({
     template: path.resolve(__dirname + "/index.html"),
     file: 'index.html',
     // only use inject: 'body' if you want to copy over all of the assets into the created template (i.e. <script>, <link>, etc)
-    inject: 'body',
+    // inject: 'body',
     minify: {
         collapseWhitespace: true,
         removeComments: true,
@@ -49,30 +44,6 @@ let indexConfig = new HtmlWebpackPlugin({
         removeStyleLinkTypeAttributes: false,
         useShortDoctype: true
     }
-})
-// OTHERWISE if a folder has subdirectories with multiple html files, use this process to map over each one 
-const otherHTML = [
-    'the',
-    'name',
-    'of',
-    'HTML',
-    'files',
-    'without',
-    '.html extension'
-]
-const multipleHTMLConfig = otherHTML.map(html => {
-    return new HtmlWebpackPlugin({
-        filename: html + '.html',
-        template: path.resolve(__dirname + `/path/to/the/file/${html}.html`),
-        minify: {
-            collapseWhitespace: true,
-            removeComments: true,
-            removeRedundantAttributes: true,
-            removeScriptTypeAttributes: true,
-            removeStyleLinkTypeAttributes: true,
-            useShortDoctype: true
-        }
-    })
 })
 /***** END bundling HTML *****/
 
@@ -157,7 +128,5 @@ module.exports = {
         // add HTML bundle here IF only HTML file is index
         indexConfig
     ]
-    // add HTML bundle here IF multiple HTML files 
-    //].concat(multipleHTMLConfig)
 }
 /***** END bundle *****/
