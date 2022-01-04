@@ -1,25 +1,24 @@
+import { positionMap } from './mapUtils.js'
+
 mapboxgl.accessToken = 'pk.eyJ1IjoibW1vbHRhIiwiYSI6ImNqZDBkMDZhYjJ6YzczNHJ4cno5eTcydnMifQ.RJNJ7s7hBfrJITOBZBdcOA'
 
 const initMap = () => {
-    let zoom = window.innerWidth <= 420 ? 7.3 : 8.25
+    const position = positionMap()
 
     return new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [-75.3, 40.071],
-        zoom: zoom
+        center: position.center,
+        zoom: position.zoom
     })
 }
 
 const makeRegionalExtentEls = map => {
-    // coordinates and zoom level for regional extent
-    const zoom = window.innerWidth <= 420 ? 7.3 : 8.25
+    const position = positionMap()
 
     const dvrpcExtent = {
-        center: [-75.3, 40.071],
-        // mobile
-        // center: [-75.25, 40.331],
-        zoom: zoom,
+        center: position.center,
+        zoom: position.zoom,
         pitch: 0,
         bearing: 0
     }
