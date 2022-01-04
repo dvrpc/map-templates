@@ -27,12 +27,21 @@ body {
 
 /* Main Webmap Area */
 .overlay {
-    width: 13em;
+    top: calc(1em + var(--padding-double) + 14.5px);
+    width: 20em;
+    width: calc(100vw - 60.5px - var(--padding-double));
+    min-height: calc(116px - var(--padding-double));
+    background-color: white;
+}
+.overlay-details {
+    margin: var(--padding) 0 var(--padding-half) 0;
+}
+.overlay-hr {
+    margin: var(--padding) 0;
 }
 .mapboxgl-ctrl-geocoder {
+    width: calc(100vw - 20px);
     font-size: 0.9rem;
-    min-width: unset;
-    width: 75%;
 }
 .mapboxgl-ctrl-geocoder--input {
     height: 30px;

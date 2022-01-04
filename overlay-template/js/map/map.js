@@ -5,7 +5,7 @@ const initMap = () => {
 
     return new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: 'mapbox://styles/mapbox/streets-v11',
         center: [-75.3, 40.071],
         zoom: zoom
     })
@@ -17,6 +17,8 @@ const makeRegionalExtentEls = map => {
 
     const dvrpcExtent = {
         center: [-75.3, 40.071],
+        // mobile
+        // center: [-75.25, 40.331],
         zoom: zoom,
         pitch: 0,
         bearing: 0

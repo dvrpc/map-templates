@@ -43,7 +43,8 @@ a {
     --padding-double: 20px;
 
     --border-radius: 4px;
-    --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    --box-shadow: 1px 2px 3px rgba(0,0,0,0.15);
+    --box-shadow-nav: 1px 2px 3px rgba(0,0,0,0.3);
     --box-shadow-half: 0.5px 1px 1.5px rgba(0, 0, 0, 0.15);
 }
 .flex-row {
@@ -128,7 +129,7 @@ nav {
     padding: 0 var(--padding);
     background-color: var(--theme-dvrpc);
     color: var(--theme-white);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-nav);
     z-index: 2;
 }
 .nav-btn {
@@ -225,6 +226,7 @@ nav {
 
 /* Map */
 .map {
+    position: relative;
     width: 70%;
     height: 100%;
 }
@@ -253,7 +255,6 @@ nav {
     font-size: 1.125em;
     font-weight: 500;
     text-align: center;
-    padding-bottom: 1ch;
     border-bottom: 1px solid var(--theme-black);
 }
 .legend-item {
@@ -266,9 +267,9 @@ nav {
 .legend-icon-line {
     display: block;
     width: 2.5px;
-    height: 25px;
+    height: 15px;
     margin-right: 12.5px;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     /* account for transform */
     margin-left: 7.5px;
 }

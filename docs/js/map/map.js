@@ -5,7 +5,7 @@ const initMap = () => {
 
     return new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: 'mapbox://styles/mapbox/streets-v11',
         center: [-75.3, 40.071],
         zoom: zoom
     })

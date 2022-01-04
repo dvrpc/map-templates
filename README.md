@@ -1,5 +1,7 @@
 # Webmap Templates
-Use the templates in this repo to bootstrap custom webmapping projects. All templates follow the steps below to take you from download to deployment. 
+Use the templates in this repo to bootstrap custom webmapping projects. All templates follow the steps below to take you from download to deployment.
+
+[View overlay-template example](https://dvrpc.github.io/map-templates/)
 
 ## Includes
 - Config for forms, legends and layers to easily add map sources, layers, layer toggles and legend info
@@ -11,24 +13,25 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 - Responsive design
 
 ## Getting Started
-To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The `/demo/` path in each template directory contains a working demo to provide code examples for simple interactions. You can also [view a live version of the overlay-template demo](https://dvrpc.github.io/map-templates/)
+To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The `/demo/` path in each template directory contains a working demo to provide code examples for getting started.
 
-<br />
-
-<strong>To start a project using one of the templates:</strong>
+### Set Up
 - Initialize empty Git repo for project
 - Copy template directory to project root
 - fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
 - `npm clean-install`
 - commit and push
 - Spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) from root to launch project
+
+### Add Layers & Toggles
 - Add default map layers to `/js/map/mapLayers.js`
     - default map layers are visible after the initial page load. DVRPC County and municipal boundaries are included with the template. 
 - Add secondary map layers to `/js/map/secondaryMapLayers.js`
     - secondary map layers aren't visible until they are toggled on by a user
 - Add legend information to `/js/legendConfig.js`
 - Add toggles within the `<form id="toggle-form>` element in the sidebar.<strong> make sure to set toggle `value` attribute to its corresponding layer id, defined in either `mapLayers.js` or `secondaryMapLayers.js`</strong>
-- The rest of the content, actions and styles are up to you. Happy hacking. 
+
+The rest of the content, actions and styles are up to you. Happy hacking. 
 
 ## Deployment
 - make sure meta tags (created, description and keywords) and OG tags are filled out
