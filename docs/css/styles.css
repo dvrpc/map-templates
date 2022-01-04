@@ -18,6 +18,7 @@ summary {
 fieldset {
     font-size: 0.8em;
     border-radius: var(--border-radius);
+    background-color: white;
 }
 select, input {
     cursor: pointer;
@@ -25,7 +26,6 @@ select, input {
 select {
     border-radius: var(--border-radius);
     padding: 0.5em 0.25em;
-    background-color: inherit;
 }
 input[type=radio], input[type=checkbox] {
     margin-right: 0.75em;
@@ -45,7 +45,8 @@ a {
     --padding-double: 20px;
 
     --border-radius: 4px;
-    --box-shadow: 1px 2px 3px rgba(0,0,0,0.3);
+    --box-shadow: 1px 2px 3px rgba(0,0,0,0.15);
+    --box-shadow-nav: 1px 2px 3px rgba(0,0,0,0.3);
     --box-shadow-half: 0.5px 1px 1.5px rgba(0, 0, 0, 0.15);
 }
 .flex-row {
@@ -134,7 +135,7 @@ nav {
     padding: 0 var(--padding);
     background-color: var(--theme-dvrpc);
     color: #f7f7f7;
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--box-shadow-nav);
     z-index: 1;
 }
 .nav-btn {
@@ -164,6 +165,7 @@ nav {
 
 /* Main Webmap Area */
 .map {
+    position: relative;
     height: 94vh;
     width: 100%;
 }
@@ -205,7 +207,7 @@ nav {
     left: 10px;
     font-size: 1rem;
     padding: var(--padding);
-    background-color: var(--theme-offwhite);
+    background-color: var(--theme-white);
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
 }
@@ -213,7 +215,7 @@ nav {
     margin: var(--padding-double) 0 var(--padding-half) 0;
 }
 .overlay-details:first-of-type {
-    margin-top: var(--padding-half);
+    margin-top: 0;
 }
 .overlay-h2 {
     font-size: 1em;
@@ -223,7 +225,7 @@ nav {
     margin: var(--padding-double) 0;
 }
 .overlay-form, .overlay-select {
-    background-color: var(--theme-white);
+    background-color: white;
     font-size: inherit;
 }
 .label-select {
@@ -245,7 +247,7 @@ nav {
 }
 .legend-section {
     padding: 0 var(--padding);
-    background-color: var(--theme-white);
+    background-color: white
 }
 .legend-item {
     margin: 10px 15px 10px 0;
@@ -254,9 +256,9 @@ nav {
 .legend-icon-line {
     display: block;
     width: 2.5px;
-    height: 25px;
+    height: 15px;
     margin-right: 12.5px;
-    transform: rotate(45deg);
+    transform: rotate(90deg);
     /* account for transform */
     margin-left: 7.5px;
 }
