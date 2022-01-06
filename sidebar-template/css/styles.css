@@ -172,7 +172,6 @@ nav {
     position: relative;
     width: 100px;
     height: 100px;
-    /* half - ring size * 2 */
     top: calc(50% - 40px);
     left: calc(50% - 40px);
     z-index: 2;
