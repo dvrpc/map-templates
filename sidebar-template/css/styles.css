@@ -172,8 +172,9 @@ nav {
     position: relative;
     width: 100px;
     height: 100px;
-    top: calc(23.5vh - 50px); 
-    left: calc(50vw - 40px);
+    /* half - ring size * 2 */
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
     z-index: 2;
 }
 .lds-ring-active {
@@ -187,9 +188,9 @@ nav {
     width: 80px;
     height: 80px;
     margin: 8px;
-    border: 8px solid #fff;
+    border: 8px solid var(--theme-dvrpc);
     border-radius: 50%;
-    border-color: #fff transparent transparent transparent;
+    border-color: var(--theme-dvrpc) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
