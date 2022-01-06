@@ -41,5 +41,12 @@ map.on('load', () => {
     }
 })
 
+// loading spinner 
+map.on('idle', () => {
+    const spinner = map['_container'].querySelector('.lds-ring')
+    spinner.classList.remove('lds-ring-active')
+})
+
+
 // modal
 handleModal(modal, modalToggle, closeModal)
