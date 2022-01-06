@@ -4,13 +4,13 @@ Use the templates in this repo to bootstrap custom webmapping projects. All temp
 [View overlay-template example](https://dvrpc.github.io/map-templates/)
 
 ## Includes
-- Config for forms, legends and layers to easily add map sources, layers, layer toggles and legend info
-- Mapbox geocoder to search + zoom to
-- About modal to provide additional information about the app
-- DVRPC icon map overlay to easily re-orient view to the DVRPC region
-- Webpack config that outputs compiled project to `/build/`
+- Config to sync layer, legend and form toggles
+- Mapbox geocoder to zoom to address
+- About modal to provide information about the project
+- DVRPC bug map control to reset pitch and bearing and zoom to regional extent
 - Google Analytics tracking script
 - Responsive design
+- Webpack config to output compiled project to `/build/`
 
 ## Getting Started
 To familiarize yourself with the templates, spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) and poke around the template directories. The `/demo/` path in each template directory contains a working demo to provide code examples for getting started.
@@ -18,14 +18,16 @@ To familiarize yourself with the templates, spin up a local server ([live server
 ### Set Up
 - Initialize empty Git repo for project
 - Copy template directory to project root
-- fill out the `name`, `description`, `author` and `repository: { url: ''}` fields in `package.json`. Optionally fill out `keywords`
+- fill out the `name` and `version` fields in `package.json`
+    - (optional) fill out `description`, `author`, `repository: { url: ''}` and `keywords`
 - `npm clean-install`
 - commit and push
 - Spin up a local server ([live server plugin](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for vscode) from root to launch project
 
 ### Add Layers & Toggles
 - Add default map layers to `/js/map/mapLayers.js`
-    - default map layers are visible after the initial page load. DVRPC County and municipal boundaries are included with the template. 
+    - default map layers are visible after the initial page load
+    - DVRPC County and municipal boundaries are included as defaults in the templates
 - Add secondary map layers to `/js/map/secondaryMapLayers.js`
     - secondary map layers aren't visible until they are toggled on by a user
 - Add legend information to `/js/legendConfig.js`
