@@ -4,21 +4,6 @@
         Minified HTML pages 
         Minified CSS
         The rest of your static assets
-
-    DEV-DEPENDENCIES (npm i --save-dev):
-        "copy-webpack-plugin": "^7.0.0",
-        "css-loader": "^5.0.1",
-        "css-minimizer-webpack-plugin": "^1.1.5",
-        "file-loader": "^6.2.0",
-        "html-webpack-plugin": "^4.5.0",
-        "mini-css-extract-plugin": "^1.3.3",
-        "path": "^0.12.7",
-        "style-loader": "^2.0.0",
-        "webpack": "^5.10.3",
-        "webpack-cli": "^4.2.0"
-        
-    DEPENDENCIES (npm i) if necessary
-        @babel/polyfill 
 */
 
 const path = require('path')
