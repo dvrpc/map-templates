@@ -1,3 +1,4 @@
+// default layers - everything that needs to be visible/interactive on load
 const layers = {
     countyOutline: {
         "id": "county-outline",
@@ -24,7 +25,7 @@ const layers = {
             'line-color': '#4a5c64'
         }
     }
-    // add default layers here
+    // add additional layers here
 }
 
 export default layers

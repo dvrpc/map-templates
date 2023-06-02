@@ -32,8 +32,8 @@ a {
     color: var(--theme-black);
 }
 :root {
-    --theme-dvrpc: #0078ae;
-    --theme-dvrpc-accent: #366478;
+    --theme-main: #0078ae;
+    --theme-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
     --theme-offwhite: #f2f2f2;
@@ -64,6 +64,13 @@ a {
 }
 .flex-end {
     justify-content: flex-end;
+}
+.container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-half);
+    padding: 10px;
+    margin: 5px auto;
 }
 /* END General */
 
@@ -101,7 +108,7 @@ a {
     margin: 0 auto;
 }
 .modal-section h3 {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
 }
 .close-modal{
     position: absolute;
@@ -112,7 +119,7 @@ a {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
 }
 .modal-hr {
     margin: var(--padding-double) auto;
@@ -123,11 +130,11 @@ a {
 
 
 /* Navbar */
-nav {
+.top-nav {
     position: relative;
     height: 6vh;
     padding: 0 var(--padding);
-    background-color: var(--theme-dvrpc);
+    background-color: var(--theme-main);
     color: var(--theme-white);
     box-shadow: var(--box-shadow-nav);
     z-index: 2;
@@ -146,7 +153,7 @@ nav {
     font-size: 1.5em;
     font-weight: 200;
 }
-#dvrpc-logo {
+.dvrpc-logo {
     display: block;
     width: 75px;
 }
@@ -187,9 +194,9 @@ nav {
     width: 80px;
     height: 80px;
     margin: 8px;
-    border: 8px solid var(--theme-dvrpc);
+    border: 8px solid var(--theme-main);
     border-radius: 50%;
-    border-color: var(--theme-dvrpc) transparent transparent transparent;
+    border-color: var(--theme-main) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -229,12 +236,12 @@ nav {
     overflow-y: auto;
 }
 .sidebar-h2 {
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
     font-size: 2em;
     text-align: center;
 }
 .sidebar-h3 {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
     font-size: 1.125em;
     font-weight: 400;
     margin-top: var(--padding-double);
@@ -292,7 +299,7 @@ nav {
     padding: var(--padding);
 }
 .legend-title {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
     font-size: 1.125em;
     font-weight: 500;
     text-align: center;

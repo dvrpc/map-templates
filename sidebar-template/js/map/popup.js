@@ -1,31 +1,14 @@
+// functions to create and configure popups
 const makePopup = () => new mapboxgl.Popup()
 
-const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
-
+const addPopup = (map, lnglat, html, popup) => {
     popup
-    .setLngLat(target.lngLat)
+    .setLngLat(lnglat)
     .setHTML(html)
     .addTo(map)
 }
 
-// @params props
-    // {
-    //  display: 'name to display',
-    //  prop: 'value of property'
-    // }
-const makePopupHTML = props => {
-    let html = ''
 
-    props.forEach(prop => {
-        html += `
-            <span class="popup-span">
-                ${prop.display}: <strong>${prop.prop}</strong> 
-            </span>
-        `
-    })
-    
-    return html
-}
+// add popup HTML functions here
 
-export { makePopup, makePopupContent }
+export { makePopup, addPopup }

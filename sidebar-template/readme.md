@@ -5,4 +5,4 @@ Copy this template to bootstrap a webmap with a sidebar positioned next to the m
 Sample webmap built from this template: [New Jersey Trails](https://www.dvrpc.org/webmaps/trails/)
 
 ## Demo
-- spin up or browse through the `/demo/` folder to get a sense of how everything hooks up to make a working map.
+- spin up or browse through the `/demo/` folder to view a way to implement an interactive map from this template.
