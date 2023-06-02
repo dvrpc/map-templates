@@ -52,7 +52,15 @@ let indexConfig = new HtmlWebpackPlugin({
 
 /***** JS/CSS Bundle + Static Assets creation *****/
 module.exports = {
-    entry: ['./js/index.js'],
+    devServer: {
+        client: {
+          overlay: {
+                errors: true,
+                warnings: false
+            }
+        }
+    },
+    entry: path.resolve(__dirname + "/js/index.js"),
     mode: 'production',
     module: {
         rules: [

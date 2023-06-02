@@ -10,12 +10,13 @@
   "license": "ISC",
   "scripts": {
     "test": "test",
-    "build": "webpack && npm version patch",
+    "start": "webpack && webpack serve",
+    "build": "webpack",
     "build:prod": "webpack -p && npm version minor"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dvrpc/map-templates/"
+    "url": "https://github.com/dvrpc/map-templates/tree/main/sidebar-template"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^7.0.0",
