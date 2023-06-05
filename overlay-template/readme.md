@@ -1,6 +1,8 @@
 # Overlay Webmap Template
-![desktop screenshot](./desktop.png)
-Copy this template to bootstrap a webmap with an overlay containing a form and legend area. Useful for projects with togglable and/or clickable layers that don't need space for text or data content.
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <img src="./mobile.png" style="width: 30%;">
+    <img src="./desktop.png" style="width: 68%;">
+</div>
 
 <br /> 
 
