@@ -3,16 +3,15 @@ import secondaryMapLayers from './map/secondaryMapLayers.js'
 /*
 // Sample functions for basic form interactions
 
-
 // @ELEMENTS: Set the "value" attribute on each form control (input, select, etc) to the id of the layer it affects.
 <form id="toggle-form" class="sidebar-form">
     <input type="checkbox" value="layer-name">
 </form>
-
 */
 
 // handles: checkboxes, toggles, radio buttons
-// function: toggles checked layer visibility
+// functionality: toggles checked layer visibility
+// returns: array of active layer ID's
 const handleFormInputs = (inputs, map) => {
     let active = []
 
@@ -40,6 +39,7 @@ const handleFormInputs = (inputs, map) => {
 
 // handles: select
 // functionality: toggle selected layer visibility
+// returns: active layer ID
 const handleFormSelect = (selects, map) => {
     let active = []
 

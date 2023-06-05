@@ -1,4 +1,4 @@
-// put additional layers that can be lazy loaded here
+// put additional layers that will be lazy loaded here
 const secondaryMapLayers = {
     
 }

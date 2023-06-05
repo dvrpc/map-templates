@@ -1,31 +1,17 @@
+// functions to create and configure popups
+
+// import makePopup in index.js to create an instance of the mapbox popup
 const makePopup = () => new mapboxgl.Popup()
 
-const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
-
+// on map event, pass popup instance + output of popup HTML function into addPopup
+const addPopup = (map, lnglat, html, popup) => {
     popup
-    .setLngLat(target.lngLat)
+    .setLngLat(lnglat)
     .setHTML(html)
     .addTo(map)
 }
 
-// @params props
-    // {
-    //  display: 'name to display',
-    //  prop: 'value of property'
-    // }
-const makePopupHTML = props => {
-    let html = ''
 
-    props.forEach(prop => {
-        html += `
-            <span class="popup-span">
-                ${prop.display}: <strong>${prop.prop}</strong> 
-            </span>
-        `
-    })
-    
-    return html
-}
+// create custom popup HTML functions here. export to index.js
 
-export { makePopup, makePopupContent }
+export { makePopup, addPopup }

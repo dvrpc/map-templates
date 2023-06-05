@@ -177,6 +177,8 @@ a {
 /* Main Webmap Area */
 .map {
     position: relative;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     height: 94vh;
     width: 100%;
 }
@@ -250,14 +252,14 @@ a {
 .overlay {
     z-index: 2;
     position: absolute;
-    width: 15em;
+    min-width: 250px;
     /* map pad(10px) + map pad(10px) + section padding(20px) = 40px */
     max-height: calc(88vh - 40px);
     overflow-x: hidden;
     overflow-y: auto;
     top: 10px;
     left: 10px;
-    font-size: 1rem;
+    font-size: 1em;
     padding: var(--padding);
     background-color: var(--theme-white);
     box-shadow: var(--box-shadow);
@@ -270,8 +272,8 @@ a {
     margin-top: 0;
 }
 .overlay-h2 {
-    font-size: 1em;
     color: var(--theme-main);
+    font-size: 1.15em;
 }
 .overlay-hr {
     margin: var(--padding-double) 0;
@@ -290,16 +292,13 @@ a {
     margin-top: var(--padding-half);
     box-shadow: var(--box-shadow-half);
     border-radius: var(--border-radius);
+    background-color: white;
 }
 .overlay-form-toggle-group {
     margin-bottom: var(--padding);
 }
 .overlay-form-toggle-group:last-child {
     margin-bottom: 0;
-}
-.legend-section {
-    padding: 0 var(--padding);
-    background-color: white
 }
 .legend-item {
     margin: 10px 15px 10px 0;
