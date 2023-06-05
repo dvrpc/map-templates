@@ -1,6 +1,8 @@
 # Sidebar Webmap Template
-![desktop screenshot](./desktop.png)
-Copy this template to bootstrap a webmap with a sidebar positioned next to the map. Useful for projects with togglable and/or clickable layers as well as text or data to support the webmap.
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <img src="./mobile.png" style="width: 30%;">
+    <img src="./desktop.png" style="width: 68%;">
+</div>
 
 <br /> 
 

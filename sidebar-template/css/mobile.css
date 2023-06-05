@@ -18,7 +18,10 @@ body {
 
 
 /* Navbar */
-#dvrpc-logo {
+.top-nav {
+    height: 5vh;
+}
+.dvrpc-logo {
     width: 55px;
 }
 /* END Navbar */
@@ -28,6 +31,7 @@ body {
 /* Main Webmap Area */
 .main-content-wrapper {
     flex-direction: column-reverse;
+    height: 95vh;
 }
 /* END Main Webmap Area */
 
@@ -36,8 +40,9 @@ body {
 /* Sidebar */
 .sidebar {
     width: 100%;
+    height: 30%;
 }
-.sidebar-content, footer {
+.sidebar-content {
     height: unset;
 }
 /* END Sidebar */
@@ -47,6 +52,7 @@ body {
 /* Map */
 .map {
     width: 100%;
+    height: 70%;
 }
 .legend-container {
     min-width: unset;
@@ -68,3 +74,10 @@ body {
     left: 6px;
 }
 /* END Map */
+
+
+/* Footer */
+footer {
+    height: unset;
+}
+/* END Footer */
