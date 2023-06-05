@@ -16,9 +16,11 @@ map.on('load', () => {
     for(const source in sources) map.addSource(source, sources[source])
     for(const layer in layers) map.addLayer(layers[layer], 'road-label')
 
-    // add map events here (click, mousemove, etc)
+    // add map events here (click, mousemove, popups, etc)
+        // see popup.js for popup config fncs
 
     // add form events here (form.onchange, etc)
+        // see forms.js for sample form config fncs
 })
 
 
