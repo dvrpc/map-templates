@@ -1,19 +1,12 @@
 const makePopup = () => new mapboxgl.Popup()
 
-const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
-
+const makePopupContent = (map, target, popup, html) => {
     popup
     .setLngLat(target.lngLat)
     .setHTML(html)
     .addTo(map)
 }
 
-// @params props
-    // {
-    //  display: 'name to display',
-    //  prop: 'value of property'
-    // }
 const makePopupHTML = props => {
     let html = ''
 
@@ -28,4 +21,4 @@ const makePopupHTML = props => {
     return html
 }
 
-export { makePopup, makePopupContent }
+export { makePopup, makePopupContent, makePopupHTML }

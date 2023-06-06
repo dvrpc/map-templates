@@ -1,8 +1,6 @@
 const makePopup = () => new mapboxgl.Popup()
 
-const makePopupContent = (map, target, popup) => {
-    const html = makePopupHTML(target.props)
-
+const makePopupContent = (map, target, html, popup) => {
     popup
     .setLngLat(target.lngLat)
     .setHTML(html)
@@ -28,4 +26,4 @@ const makePopupHTML = props => {
     return html
 }
 
-export { makePopup, makePopupContent }
+export { makePopup, makePopupContent, makePopupHTML }

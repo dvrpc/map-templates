@@ -26,6 +26,7 @@ select, input {
 select {
     border-radius: var(--border-radius);
     padding: 0.5em 0.25em;
+    background-color: white;
 }
 input[type=radio], input[type=checkbox] {
     margin-right: 0.75em;
@@ -34,11 +35,11 @@ a {
     color: var(--theme-black);
 }
 :root {
-    --theme-dvrpc: #0078ae;
-    --theme-dvrpc-accent: #366478;
+    --theme-main: #0078ae;
+    --theme-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
-    --theme-offwhite: #f2f2f2;
+    --theme-offwhite: #f5f5f5;
 
     --padding-half: 5px;
     --padding: 10px;
@@ -72,6 +73,13 @@ a {
 .summary-h2 {
     display: inline;
 }
+.container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-half);
+    padding: 10px;
+    margin: 5px auto;
+}
 /* END General */
 
 
@@ -89,12 +97,15 @@ a {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.55);
 }
 .modal-content{
     position: relative;
-    background: #fff;
     width: 50em;
+    max-height: 75%;
+    overflow-y: auto;
+    background: var(--theme-white);
+    color: var(--theme-black);
     padding: var(--padding-double);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -107,7 +118,7 @@ a {
     margin: 0 auto;
 }
 .modal-section h3 {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
 }
 .close-modal{
     position: absolute;
@@ -118,7 +129,7 @@ a {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
 }
 .modal-hr {
     margin: var(--padding-double) auto;
@@ -129,11 +140,11 @@ a {
 
 
 /* Navbar */
-nav {
+.top-nav {
     position: relative;
     height: 6vh;
     padding: 0 var(--padding);
-    background-color: var(--theme-dvrpc);
+    background-color: var(--theme-main);
     color: #f7f7f7;
     box-shadow: var(--box-shadow-nav);
     z-index: 1;
@@ -152,7 +163,7 @@ nav {
     font-size: 1.5em;
     font-weight: 200;
 }
-#dvrpc-logo {
+.dvrpc-logo {
     display: block;
     width: 75px;
 }
@@ -166,6 +177,8 @@ nav {
 /* Main Webmap Area */
 .map {
     position: relative;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     height: 94vh;
     width: 100%;
 }
@@ -210,9 +223,9 @@ nav {
     width: 80px;
     height: 80px;
     margin: 8px;
-    border: 8px solid var(--theme-dvrpc);
+    border: 8px solid var(--theme-main);
     border-radius: 50%;
-    border-color: var(--theme-dvrpc) transparent transparent transparent;
+    border-color: var(--theme-main) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -239,14 +252,14 @@ nav {
 .overlay {
     z-index: 2;
     position: absolute;
-    width: 15em;
+    min-width: 250px;
     /* map pad(10px) + map pad(10px) + section padding(20px) = 40px */
     max-height: calc(88vh - 40px);
     overflow-x: hidden;
     overflow-y: auto;
     top: 10px;
     left: 10px;
-    font-size: 1rem;
+    font-size: 1em;
     padding: var(--padding);
     background-color: var(--theme-white);
     box-shadow: var(--box-shadow);
@@ -259,8 +272,8 @@ nav {
     margin-top: 0;
 }
 .overlay-h2 {
-    font-size: 1em;
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
+    font-size: 1.15em;
 }
 .overlay-hr {
     margin: var(--padding-double) 0;
@@ -279,16 +292,13 @@ nav {
     margin-top: var(--padding-half);
     box-shadow: var(--box-shadow-half);
     border-radius: var(--border-radius);
+    background-color: white;
 }
 .overlay-form-toggle-group {
     margin-bottom: var(--padding);
 }
 .overlay-form-toggle-group:last-child {
     margin-bottom: 0;
-}
-.legend-section {
-    padding: 0 var(--padding);
-    background-color: white
 }
 .legend-item {
     margin: 10px 15px 10px 0;

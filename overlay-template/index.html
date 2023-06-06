@@ -11,8 +11,8 @@
         <meta name="owner" content="webmaster@dvrpc.org">
         <meta name="distribution" content="global">
         <meta name="robots" content="index, follow">
-        <meta name="copyright" content="1995-2020 all rights reserved">
-        <!--  DVRPC Website VERSION #7.0 Copyright (c) 1995-2020 Delaware Valley Regional Planning Commission. All rights reserved.   -->
+        <meta name="copyright" content="1995-2023 all rights reserved">
+        <!--  DVRPC Website VERSION #7.0 Copyright (c) 1995-2023 Delaware Valley Regional Planning Commission. All rights reserved.   -->
         
         <!-- social media -->
         <meta property="og:title" content="">
@@ -21,64 +21,61 @@
         <meta property="og:description" content="">
         <meta property="og:image" content="">
 
-        <!-- Analytics -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9825778-1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'UA-9825778-1');
-        </script>
-
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700&amp;display=swap">
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css" type="text/css">
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css">
+        
         <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/mobile.css" media="(max-width: 800px)">
-        
-        <script defer type="module" src="./js/index.js"></script>
     </head>
 
-    <body>
-        <nav class="flex-row flex-between">
-            <div class="flex-row">
-                <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="nav-logos" /></a>
-                
-                <span class="nav-vr">|</span>
-                
-                <img src="./imgs/project-logo.png" alt="" class="project-logo">
-                <h1>Project Name</h1>
-                
-                <span class="nav-vr">|</span>
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9825778-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-                <button id="modal-toggle" class="nav-btn">about</button>
-            </div>
+        gtag('config', 'UA-9825778-1');
+    </script>
+
+    <body>
+        <nav class="top-nav flex-row flex-align-center">
+            <a href="/" class="nav-links"><img src="./img/DVRPC-logo.png" alt="DVRPC logo" id="dvrpc-logo" class="dvrpc-logo nav-logos" /></a>
+            
+            <span class="nav-vr">|</span>
+            
+            <img src="./imgs/project-logo.png" alt="project logo" class="project-logo">
+            
+            <h1>Project Name</h1>
+            
+            <span class="nav-vr">|</span>
+            
+            <button id="modal-toggle" class="nav-btn">about</button>
         </nav>
 
         <main class="map" id="map">
             <section class="overlay">
                 <details class="overlay-details" open>
                     <summary>
-                        <h2 class="overlay-h2 summary-h2">toggle layers</h2>
+                        <h2 class="overlay-h2 summary-h2">Toggle Layers</h2>
                     </summary>
                     
                     <form id="toggle-form" class="overlay-container overlay-form flex-column">
-                        <small>add form elements here. Set the "value" attribute on each form element (<code>input</code>, <code>select</code>, etc) to the id of the layer it affects.</small>
+                        add form elements here. See form.js for guide.
                     </form>
                 </details>
 
                 <details class="overlay-details" open>
                     <summary>
-                        <h2 class="overlay-h2 summary-h2">legend</h2>
+                        <h2 class="overlay-h2 summary-h2">Legend</h2>
                     </summary>
 
                     <div class="flex-column">
                         <aside class="overlay-container legend-section flex-column">
                             <div id="legend-container" class="legend-content-container flex-row flex-wrap">
-                            
+                                Legend items go here...
                             </div>
                         </aside>
                     </div>
@@ -103,7 +100,7 @@
                 <section class="modal-section">
                     <h3>About</h3>
                     <p>Use this template to bootstrap a simple point and click map with togglable layers. Form handling and legend updates are baked in, see the demo repo for a working example.</p>
-                    <p>This template is intended for basic maps - for a more robust context, use the sidebar-template or sidebar-float-template.</p>
+                    <p>This template is intended for basic maps - for a more robust context, use the sidebar-template.</p>
                 </section>
 
                 <hr class="modal-hr" />

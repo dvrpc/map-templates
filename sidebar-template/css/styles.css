@@ -12,6 +12,9 @@ h1 {
     text-align: center;
     font-size: inherit;
 }
+summary {
+    cursor: pointer;
+}
 fieldset {
     font-size: 1em;
     border-radius: var(--border-radius);
@@ -32,11 +35,11 @@ a {
     color: var(--theme-black);
 }
 :root {
-    --theme-dvrpc: #0078ae;
-    --theme-dvrpc-accent: #366478;
+    --theme-main: #0078ae;
+    --theme-accent: #366478;
     --theme-black: #505a5e;
     --theme-white: #f7f7f7;
-    --theme-offwhite: #f2f2f2;
+    --theme-offwhite: #f5f5f5;
 
     --padding-half: 5px;
     --padding: 10px;
@@ -65,6 +68,13 @@ a {
 .flex-end {
     justify-content: flex-end;
 }
+.container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow-half);
+    padding: 10px;
+    margin: 5px auto;
+}
 /* END General */
 
 
@@ -82,13 +92,15 @@ a {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.55);
 }
 .modal-content{
     position: relative;
+    width: 50em;
+    max-height: 75%;
+    overflow-y: auto;
     background: var(--theme-white);
     color: var(--theme-black);
-    width: 50em;
     padding: var(--padding-double);
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -101,7 +113,7 @@ a {
     margin: 0 auto;
 }
 .modal-section h3 {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
 }
 .close-modal{
     position: absolute;
@@ -112,7 +124,7 @@ a {
 .modal-content-subheader {
     text-align: center;
     margin-bottom: 1rem;
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
 }
 .modal-hr {
     margin: var(--padding-double) auto;
@@ -123,11 +135,11 @@ a {
 
 
 /* Navbar */
-nav {
+.top-nav {
     position: relative;
     height: 6vh;
     padding: 0 var(--padding);
-    background-color: var(--theme-dvrpc);
+    background-color: var(--theme-main);
     color: var(--theme-white);
     box-shadow: var(--box-shadow-nav);
     z-index: 2;
@@ -146,7 +158,7 @@ nav {
     font-size: 1.5em;
     font-weight: 200;
 }
-#dvrpc-logo {
+.dvrpc-logo {
     display: block;
     width: 75px;
 }
@@ -187,9 +199,9 @@ nav {
     width: 80px;
     height: 80px;
     margin: 8px;
-    border: 8px solid var(--theme-dvrpc);
+    border: 8px solid var(--theme-main);
     border-radius: 50%;
-    border-color: var(--theme-dvrpc) transparent transparent transparent;
+    border-color: var(--theme-main) transparent transparent transparent;
 }
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -229,12 +241,12 @@ nav {
     overflow-y: auto;
 }
 .sidebar-h2 {
-    color: var(--theme-dvrpc);
+    color: var(--theme-main);
     font-size: 2em;
     text-align: center;
 }
 .sidebar-h3 {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
     font-size: 1.125em;
     font-weight: 400;
     margin-top: var(--padding-double);
@@ -286,13 +298,13 @@ nav {
     left: 10px;
     box-shadow: var(--box-shadow);
     border-radius: var(--border-radius);
-    background-color: #fff;
+    background-color: white;
     color: var(--theme-black);
     z-index: 1;
     padding: var(--padding);
 }
 .legend-title {
-    color: var(--theme-dvrpc-accent);
+    color: var(--theme-accent);
     font-size: 1.125em;
     font-weight: 500;
     text-align: center;
@@ -342,7 +354,7 @@ footer {
     padding: var(--padding);
     box-shadow: var(--box-shadow);
     overflow-y: auto;
-    background-color: var(--theme-white);
+    background-color: white;
     color: var(--theme-black);
 }
 /* END Footer */
