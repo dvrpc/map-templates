@@ -10,15 +10,6 @@ const initMap = () => {
 }
 
 const makeRegionalExtentEls = map => {
-    let zoom = window.innerWidth <= 420 ? 7.3 : 8.42
-    
-    const dvrpcExtent = {
-        center: [-75.2273, 40.071],
-        zoom: zoom,
-        pitch: 0,
-        bearing: 0
-    }
-
     // create custom button elements
     const button = document.createElement('button')
     const icon = document.createElement('img')
@@ -35,7 +26,9 @@ const makeRegionalExtentEls = map => {
 
     button.setAttribute('aria-label', 'Default DVRPC Extent')
 
-    button.onclick = () => map.flyTo({center: dvrpcExtent.center, zoom: dvrpcExtent.zoom}) 
+    button.onclick = () => map.fitBounds([
+        [-76.09405517578125, 39.49211914385648],[-74.32525634765625,40.614734298694216]
+    ])
 
     button.appendChild(icon)
 
